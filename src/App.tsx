@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import React from "react";
 import { motion } from "motion/react";
 import { 
   ShieldCheck, 
@@ -53,9 +54,17 @@ export default function App() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-navy/5 px-6 py-4 flex justify-between items-center">
-        <div className="flex flex-col">
-          <span className="font-serif text-xl font-bold tracking-tight text-navy">MONICA SEGURA</span>
-          <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold">Financial Advisor</span>
+        <div className="flex items-center gap-3">
+          <img 
+            src="https://lh3.googleusercontent.com/d/1bA-j6eDlH6cWVdTcSNuG-vXl0xC0HOev" 
+            className="w-10 h-10 rounded-full object-cover border border-gold/30" 
+            alt="Experior Logo" 
+            referrerPolicy="no-referrer" 
+          />
+          <div className="flex flex-col">
+            <span className="font-serif text-xl font-bold tracking-tight text-navy">MONICA SEGURA</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold">Financial Advisor</span>
+          </div>
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
           <a href="#inicio" className="hover:text-gold transition-colors">Inicio</a>
@@ -114,8 +123,12 @@ export default function App() {
               </a>
               <div className="flex items-center gap-4 px-4 py-2">
                 <div className="flex -space-x-2">
-                  {[1,2,3].map(i => (
-                    <img key={i} src={`https://picsum.photos/seed/user${i}/100/100`} className="w-10 h-10 rounded-full border-2 border-white" alt="Client" referrerPolicy="no-referrer" />
+                  {[
+                    "1-hXlQrIi0xjCe6mDKa9O2lSuJwKDYPCk",
+                    "1wnEV4kvviYxhDXTN5BebLBnVdHcu1Cb0",
+                    "1jGAsSmHCCHcQyEFTeRO9QihDDqmcHORJ"
+                  ].map((id, i) => (
+                    <img key={i} src={`https://lh3.googleusercontent.com/d/${id}`} className="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Client" referrerPolicy="no-referrer" />
                   ))}
                 </div>
                 <div className="text-xs">
@@ -134,7 +147,7 @@ export default function App() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
               <img 
-                src="https://picsum.photos/seed/finance-professional/800/1000" 
+                src="https://lh3.googleusercontent.com/d/1Kj9YAf4lEs4tJHkyUDLMwh-sXPZja8PX" 
                 alt="Monica Segura - Financial Advisor" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -146,7 +159,12 @@ export default function App() {
               <p className="text-xs uppercase tracking-widest text-gold font-bold">De Experiencia</p>
             </div>
             <div className="absolute top-12 -right-6 bg-gold p-6 rounded-2xl shadow-xl text-navy hidden md:block">
-              <Award size={32} className="mb-2" />
+              <img 
+                src="https://lh3.googleusercontent.com/d/1bA-j6eDlH6cWVdTcSNuG-vXl0xC0HOev" 
+                className="w-12 h-12 rounded-full mb-2 object-cover border-2 border-white/50" 
+                alt="Experior Badge" 
+                referrerPolicy="no-referrer" 
+              />
               <p className="font-bold leading-tight">Estratega en<br/>Protección Familiar</p>
             </div>
           </motion.div>
@@ -285,7 +303,7 @@ export default function App() {
           <div className="order-1 lg:order-2 relative">
             <div className="aspect-square rounded-full overflow-hidden border-[16px] border-white shadow-2xl relative z-10">
               <img 
-                src="https://picsum.photos/seed/monica-profile/800/800" 
+                src="https://lh3.googleusercontent.com/d/1bA-j6eDlH6cWVdTcSNuG-vXl0xC0HOev" 
                 alt="Monica Segura Montañez" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
